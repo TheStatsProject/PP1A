@@ -1,6 +1,6 @@
 site_name: Finance Models
 theme:
   name: material
-repo_url: https://github.com/<your-user>/finance-models-docs
+repo_url: https://github.com/TheStatsProject/finance-models-docs
 nav:
   - Home: index.md
