@@ -1,4 +1,4 @@
-name: Deploy MkDocs Material
+name: Deploy MkDocs
 
 on:
   push:
@@ -8,13 +8,27 @@ on:
       - 'mkdocs.yml'
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install Python & MkDocs Material
-        run: |
-          python -m pip install --upgrade pip
-          pip install mkdocs-material
-      - name: Deploy
-        run: mkdocs gh-deploy --force
+        with:
+          persist-credentials: true  # reuse GITHUB_TOKEN for push
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install mkdocs-material
+
+      - name: Build site
+        run: mkdocs build --site-dir site
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site
