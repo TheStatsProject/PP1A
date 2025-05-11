@@ -5,6 +5,4 @@ repo_url: https://github.com/TheStatsProject/PP1A
 nav:
   - Home: index.md
   - Models:
-      - Model A: models/model_a.md
-      - Model B: models/model_b.md
       - My New Article: models/my-new-article.md 
