@@ -1,11 +1,11 @@
 site_name: Finance Models
 theme:
-  name: material
+  name: mkdocs
 repo_url: https://github.com/TheStatsProject/PP1A
 nav:
   - Home: index.md
   - Articles:
-      - New Article: new-article.md
+      - New Article: docs/models/new-article.md
       - About: about.md
   - Guides:
       - Getting Started: getting-started.md
