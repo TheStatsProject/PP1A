@@ -3,7 +3,13 @@ theme:
   name: material
 repo_url: https://github.com/TheStatsProject/PP1A
 nav:
-nav:
   - Home: index.md
-  - About: about.md
-  - New Article: new-article.md
+  - Articles:
+      - New Article: new-article.md
+      - About: about.md
+  - Guides:
+      - Getting Started: getting-started.md
+      - Advanced Topics: advanced-topics.md
+  - Resources:
+      - FAQs: faqs.md
+      - API Reference: api-reference.md
