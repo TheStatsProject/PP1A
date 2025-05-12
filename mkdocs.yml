@@ -6,7 +6,7 @@ nav:
   - Home: index.md
   - Articles:
       - New Article: new-article.md
-      - About: about.md
+      - About: docs/models/new-article.md
   - Guides:
       - Getting Started: getting-started.md
       - Advanced Topics: advanced-topics.md
